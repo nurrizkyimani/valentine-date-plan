@@ -3,6 +3,8 @@ import { Button } from "@/components/ui/button";
 import { useQuery } from "@tanstack/react-query";
 import { useLocation, useParams } from "wouter";
 import { motion } from "framer-motion";
+import { MapPin } from "lucide-react";
+import { valentineContent } from "@/content/valentine";
 import type { Restaurant } from "@shared/schema";
 
 export default function Restaurants() {
@@ -12,6 +14,11 @@ export default function Restaurants() {
   const { data: restaurants, isLoading } = useQuery<Restaurant[]>({
     queryKey: [`/api/restaurants/${typeId}`],
   });
+
+  const openInGoogleMaps = (address: string) => {
+    const encodedAddress = encodeURIComponent(address + ", New York, NY");
+    window.open(`https://www.google.com/maps/search/?api=1&query=${encodedAddress}`, '_blank');
+  };
 
   if (isLoading) {
     return <div>Loading...</div>;
@@ -25,9 +32,12 @@ export default function Restaurants() {
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.5 }}
         >
-          <h1 className="text-4xl font-bold text-primary text-center mb-8">
-            Choose Your Restaurant
+          <h1 className="text-4xl font-bold text-primary text-center mb-2">
+            {valentineContent.restaurants.title}
           </h1>
+          <p className="text-lg text-center mb-8 text-muted-foreground">
+            {valentineContent.restaurants.subtitle}
+          </p>
         </motion.div>
 
         <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
@@ -47,16 +57,35 @@ export default function Restaurants() {
                   <h2 className="text-xl font-semibold mb-2">{restaurant.name}</h2>
                   <p className="text-muted-foreground mb-4">{restaurant.description}</p>
                   <p className="text-sm text-muted-foreground mb-4">{restaurant.address}</p>
-                  <Button 
-                    className="w-full"
-                    onClick={() => setLocation(`/form?restaurantId=${restaurant.id}`)}
-                  >
-                    Select This Restaurant
-                  </Button>
+                  <div className="space-y-3">
+                    <Button 
+                      className="w-full bg-primary hover:bg-primary/90"
+                      onClick={() => setLocation(`/form?restaurantId=${restaurant.id}`)}
+                    >
+                      {valentineContent.restaurants.selectButton}
+                    </Button>
+                    <Button 
+                      variant="outline"
+                      className="w-full"
+                      onClick={() => openInGoogleMaps(restaurant.address)}
+                    >
+                      <MapPin className="w-4 h-4 mr-2" />
+                      {valentineContent.restaurants.mapButton}
+                    </Button>
+                  </div>
                 </CardContent>
               </Card>
             </motion.div>
           ))}
+        </div>
+
+        <div className="mt-8 text-center">
+          <Button
+            variant="outline"
+            onClick={() => setLocation("/restaurant-types")}
+          >
+            {valentineContent.restaurants.backButton}
+          </Button>
         </div>
       </div>
     </div>

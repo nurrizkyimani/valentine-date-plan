@@ -50,7 +50,7 @@ export default function Confirmation() {
               }}
             >
               <p className="text-lg font-medium text-primary">
-                Our romantic journey begins here...
+                {valentineContent.confirmation.journey}
               </p>
             </div>
 
@@ -59,7 +59,7 @@ export default function Confirmation() {
               onClick={() => setLocation("/")}
               className="bg-primary hover:bg-primary/90"
             >
-              Back to Start
+              {valentineContent.confirmation.backButton}
             </Button>
           </CardContent>
         </Card>

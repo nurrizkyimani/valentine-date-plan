@@ -24,6 +24,7 @@ export const submissions = pgTable("submissions", {
   email: text("email").notNull(),
   restaurantId: integer("restaurant_id").notNull(),
   date: text("date").notNull(),
+  time: text("time").notNull(), // Add time field
 });
 
 export const insertSubmissionSchema = createInsertSchema(submissions).pick({
@@ -31,6 +32,7 @@ export const insertSubmissionSchema = createInsertSchema(submissions).pick({
   email: true,
   restaurantId: true,
   date: true,
+  time: true,
 });
 
 export type RestaurantType = typeof restaurantTypes.$inferSelect;

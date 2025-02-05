@@ -24,6 +24,7 @@ export default function Form() {
     defaultValues: {
       restaurantId: parseInt(restaurantId || "0"),
       date: new Date().toISOString().split("T")[0],
+      time: "19:00", // Default to 7 PM
     },
   });
 
@@ -63,13 +64,18 @@ export default function Form() {
             <form onSubmit={form.handleSubmit((data) => mutation.mutate(data))}>
               <div className="space-y-4">
                 <div>
-                  <Label htmlFor="name">Your Name</Label>
+                  <Label htmlFor="name">{valentineContent.form.nameLabel}</Label>
                   <Input {...form.register("name")} id="name" />
                 </div>
 
                 <div>
-                  <Label htmlFor="email">Email Address</Label>
+                  <Label htmlFor="email">{valentineContent.form.emailLabel}</Label>
                   <Input {...form.register("email")} id="email" type="email" />
+                </div>
+
+                <div>
+                  <Label htmlFor="time">{valentineContent.form.timeLabel}</Label>
+                  <Input {...form.register("time")} id="time" type="time" />
                 </div>
 
                 <div>
@@ -79,10 +85,19 @@ export default function Form() {
 
                 <Button 
                   type="submit" 
-                  className="w-full"
+                  className="w-full bg-primary hover:bg-primary/90"
                   disabled={mutation.isPending}
                 >
-                  {mutation.isPending ? "Submitting..." : "Confirm Reservation"}
+                  {mutation.isPending ? "Sending..." : valentineContent.form.submitButton}
+                </Button>
+
+                <Button 
+                  type="button"
+                  variant="outline"
+                  className="w-full"
+                  onClick={() => window.history.back()}
+                >
+                  {valentineContent.form.backButton}
                 </Button>
               </div>
             </form>

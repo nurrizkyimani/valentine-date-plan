@@ -1,4 +1,5 @@
 import { Card, CardContent } from "@/components/ui/card";
+import { Button } from "@/components/ui/button";
 import { useQuery } from "@tanstack/react-query";
 import { useLocation } from "wouter";
 import { motion } from "framer-motion";
@@ -54,6 +55,15 @@ export default function RestaurantTypes() {
               </Card>
             </motion.div>
           ))}
+        </div>
+
+        <div className="mt-8 text-center">
+          <Button
+            variant="outline"
+            onClick={() => setLocation("/")}
+          >
+            {valentineContent.types.backButton}
+          </Button>
         </div>
       </div>
     </div>
