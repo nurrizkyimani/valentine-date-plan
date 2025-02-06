@@ -11,14 +11,20 @@ export default function Proposal() {
   const [isHovering, setIsHovering] = useState(false);
 
   const moveButton = () => {
-    const newX = Math.random() * (window.innerWidth - 200); // Subtract button width
-    const newY = Math.random() * (window.innerHeight - 50); // Subtract button height
+    // Limit the movement to stay within 40% of the viewport from the center
+    const maxDistance = {
+      x: window.innerWidth * 0.4,
+      y: window.innerHeight * 0.4
+    };
+
+    const newX = (Math.random() - 0.5) * maxDistance.x;
+    const newY = (Math.random() - 0.5) * maxDistance.y;
+
     setNoButtonPosition({ x: newX, y: newY });
     setIsHovering(true);
   };
 
   useEffect(() => {
-    // Reset position when window is resized
     const handleResize = () => {
       if (isHovering) {
         moveButton();
@@ -59,17 +65,18 @@ export default function Proposal() {
               <motion.div
                 style={{
                   position: isHovering ? 'fixed' : 'relative',
-                  top: noButtonPosition.y,
-                  left: noButtonPosition.x,
+                  top: '50%',
+                  left: '50%',
+                  transform: `translate(calc(-50% + ${noButtonPosition.x}px), calc(-50% + ${noButtonPosition.y}px))`,
                   zIndex: 50,
                 }}
-                animate={isHovering ? { x: 0, y: 0 } : {}}
-                transition={{ type: "spring", stiffness: 300 }}
+                animate={{ x: 0, y: 0 }}
+                transition={{ type: "spring", stiffness: 200 }}
               >
                 <Button
                   size="lg"
                   variant="secondary"
-                  className="bg-primary/10 hover:bg-primary/20 text-primary"
+                  className="bg-primary/5 hover:bg-primary/10 text-primary/60"
                   onMouseEnter={moveButton}
                   onTouchStart={moveButton}
                 >
