@@ -24,11 +24,6 @@ export default function Proposal() {
     setIsHovering(true);
   };
 
-  const handleMouseLeave = () => {
-    setIsHovering(false);
-    setNoButtonPosition({ x: 0, y: 0 });
-  };
-
   useEffect(() => {
     const handleResize = () => {
       if (isHovering) {
@@ -85,9 +80,7 @@ export default function Proposal() {
                   variant="secondary"
                   className="bg-primary/5 hover:bg-primary/10 text-primary/60"
                   onMouseEnter={moveButton}
-                  onMouseLeave={handleMouseLeave}
                   onTouchStart={moveButton}
-                  onTouchEnd={handleMouseLeave}
                 >
                   {valentineContent.proposal.backButton}
                 </Button>
