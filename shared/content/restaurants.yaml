@@ -2,46 +2,46 @@ restaurantTypes:
   - id: 1
     name: "Fine Dining"
     description: "Elegant atmosphere and exquisite cuisine for our perfect evening"
-    imageUrl: "https://lh5.googleusercontent.com/p/AF1QipOyZKgXFRuXaAqZ15Cux_9ZQzMQTGAGT5P-RQJx=w408-h306-k-no"
+    imageUrl: "https://images.pexels.com/photos/262047/pexels-photo-262047.jpeg"
   - id: 2
     name: "Casual Italian"
     description: "Where romance meets authentic Italian flavors"
-    imageUrl: "https://lh5.googleusercontent.com/p/AF1QipP5hAFz5NxcTJT3h7t5dZG-vvsbLHGxAi9j4aeX=w408-h306-k-no"
+    imageUrl: "https://images.pexels.com/photos/1484516/pexels-photo-1484516.jpeg"
   - id: 3
     name: "French Bistro"
     description: "A cozy corner of Paris in the heart of the city"
-    imageUrl: "https://lh5.googleusercontent.com/p/AF1QipPfqX8d9VDGVeej0G_GhR-lS3ExYyqfnCyCnuqm=w408-h306-k-no"
+    imageUrl: "https://images.pexels.com/photos/941861/pexels-photo-941861.jpeg"
   - id: 4
     name: "Rooftop Bar"
     description: "Toast to love under the stars"
-    imageUrl: "https://lh5.googleusercontent.com/p/AF1QipPOC6VzCkDPyLsBnuB79Q6Bc_mrKNRtMI5BiuYB=w408-h306-k-no"
+    imageUrl: "https://images.pexels.com/photos/1267696/pexels-photo-1267696.jpeg"
 
 restaurants:
   - id: 1
     typeId: 1
     name: "Le Bernardin"
     description: "Let our love story unfold in this world-class French restaurant"
-    imageUrl: "https://lh5.googleusercontent.com/p/AF1QipOyZKgXFRuXaAqZ15Cux_9ZQzMQTGAGT5P-RQJx=w408-h306-k-no"
+    imageUrl: "https://images.pexels.com/photos/262047/pexels-photo-262047.jpeg"
     address: "155 W 51st St"
     mapsUrl: "https://maps.app.goo.gl/bxHZxFSHsr5yDGjj9"
   - id: 2
     typeId: 1
     name: "Daniel"
     description: "A symphony of flavors for our special evening"
-    imageUrl: "https://lh5.googleusercontent.com/p/AF1QipP5hAFz5NxcTJT3h7t5dZG-vvsbLHGxAi9j4aeX=w408-h306-k-no"
+    imageUrl: "https://images.pexels.com/photos/260922/pexels-photo-260922.jpeg"
     address: "60 E 65th St"
     mapsUrl: "https://maps.app.goo.gl/bxHZxFSHsr5yDGjj9"
   - id: 3
     typeId: 2
     name: "Carbone"
     description: "Where Italian passion meets culinary excellence"
-    imageUrl: "https://lh5.googleusercontent.com/p/AF1QipPfqX8d9VDGVeej0G_GhR-lS3ExYyqfnCyCnuqm=w408-h306-k-no"
+    imageUrl: "https://images.pexels.com/photos/1484516/pexels-photo-1484516.jpeg"
     address: "181 Thompson St"
     mapsUrl: "https://maps.app.goo.gl/bxHZxFSHsr5yDGjj9"
   - id: 4
     typeId: 3
     name: "Balthazar"
     description: "A taste of Parisian romance in New York"
-    imageUrl: "https://lh5.googleusercontent.com/p/AF1QipPOC6VzCkDPyLsBnuB79Q6Bc_mrKNRtMI5BiuYB=w408-h306-k-no"
+    imageUrl: "https://images.pexels.com/photos/941861/pexels-photo-941861.jpeg"
     address: "80 Spring St"
     mapsUrl: "https://maps.app.goo.gl/bxHZxFSHsr5yDGjj9"

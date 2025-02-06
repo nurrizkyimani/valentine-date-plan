@@ -34,6 +34,7 @@ export default function Proposal() {
         initial={{ opacity: 0, y: 20 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.8 }}
+        className="w-full max-w-lg"
       >
         <Card className="w-full max-w-lg">
           <CardContent className="pt-6">
@@ -67,7 +68,8 @@ export default function Proposal() {
               >
                 <Button
                   size="lg"
-                  variant="outline"
+                  variant="secondary"
+                  className="bg-primary/10 hover:bg-primary/20 text-primary"
                   onMouseEnter={moveButton}
                   onTouchStart={moveButton}
                 >
