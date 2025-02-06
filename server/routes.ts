@@ -2,6 +2,7 @@ import type { Express } from "express";
 import { createServer, type Server } from "http";
 import { storage } from "./storage";
 import { insertSubmissionSchema } from "@shared/schema";
+import { sendValentineConfirmation } from "./email";
 
 export function registerRoutes(app: Express): Server {
   app.get("/api/restaurant-types", async (_req, res) => {
@@ -28,8 +29,25 @@ export function registerRoutes(app: Express): Server {
     try {
       const data = insertSubmissionSchema.parse(req.body);
       const submission = await storage.createSubmission(data);
+
+      // Get restaurant details for the email
+      const restaurant = await storage.getRestaurant(data.restaurantId);
+      if (!restaurant) {
+        throw new Error("Restaurant not found");
+      }
+
+      // Send confirmation email
+      await sendValentineConfirmation(
+        data.email,
+        data.name,
+        data.date,
+        data.time,
+        restaurant.name
+      );
+
       res.json(submission);
     } catch (error) {
+      console.error('Submission error:', error);
       res.status(400).json({ message: "Invalid submission data" });
     }
   });
