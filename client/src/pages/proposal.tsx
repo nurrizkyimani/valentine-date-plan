@@ -11,10 +11,10 @@ export default function Proposal() {
   const [isHovering, setIsHovering] = useState(false);
 
   const moveButton = () => {
-    // Limit the movement to stay within 40% of the viewport from the center
+    // Use smaller viewport units for mobile-friendly movement
     const maxDistance = {
-      x: window.innerWidth * 0.4,
-      y: window.innerHeight * 0.4
+      x: Math.min(window.innerWidth * 0.25, 150), // Max 150px or 25% of viewport
+      y: Math.min(window.innerHeight * 0.25, 150), // Max 150px or 25% of viewport
     };
 
     const newX = (Math.random() - 0.5) * maxDistance.x;
@@ -53,7 +53,7 @@ export default function Proposal() {
             >
               {valentineContent.proposal.message}
             </div>
-            <div className="flex justify-center gap-4 relative">
+            <div className="flex justify-center gap-4 items-center">
               <Button 
                 size="lg"
                 className="bg-primary hover:bg-primary/90"
@@ -64,10 +64,12 @@ export default function Proposal() {
 
               <motion.div
                 style={{
-                  position: isHovering ? 'fixed' : 'relative',
+                  position: isHovering ? 'fixed' : 'static',
                   top: '50%',
                   left: '50%',
-                  transform: `translate(calc(-50% + ${noButtonPosition.x}px), calc(-50% + ${noButtonPosition.y}px))`,
+                  transform: isHovering 
+                    ? `translate(calc(-50% + ${noButtonPosition.x}px), calc(-50% + ${noButtonPosition.y}px))`
+                    : 'none',
                   zIndex: 50,
                 }}
                 animate={{ x: 0, y: 0 }}
