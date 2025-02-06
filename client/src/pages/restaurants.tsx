@@ -4,7 +4,7 @@ import { useQuery } from "@tanstack/react-query";
 import { useLocation, useParams } from "wouter";
 import { motion } from "framer-motion";
 import { MapPin } from "lucide-react";
-import { valentineContent } from "@/content/valentine";
+import { valentineContent } from "@shared/content/valentine";
 import type { Restaurant } from "@shared/schema";
 
 export default function Restaurants() {
@@ -15,9 +15,8 @@ export default function Restaurants() {
     queryKey: [`/api/restaurants/${typeId}`],
   });
 
-  const openInGoogleMaps = (address: string) => {
-    const encodedAddress = encodeURIComponent(address + ", New York, NY");
-    window.open(`https://www.google.com/maps/search/?api=1&query=${encodedAddress}`, '_blank');
+  const openInGoogleMaps = (url: string) => {
+    window.open(url, '_blank');
   };
 
   if (isLoading) {
@@ -67,7 +66,7 @@ export default function Restaurants() {
                     <Button 
                       variant="outline"
                       className="w-full"
-                      onClick={() => openInGoogleMaps(restaurant.address)}
+                      onClick={() => openInGoogleMaps(restaurant.mapsUrl)}
                     >
                       <MapPin className="w-4 h-4 mr-2" />
                       {valentineContent.restaurants.mapButton}

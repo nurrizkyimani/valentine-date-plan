@@ -16,6 +16,7 @@ export const restaurants = pgTable("restaurants", {
   typeId: integer("type_id").notNull(),
   imageUrl: text("image_url").notNull(),
   address: text("address").notNull(),
+  mapsUrl: text("maps_url").notNull(),
 });
 
 export const submissions = pgTable("submissions", {
@@ -24,7 +25,7 @@ export const submissions = pgTable("submissions", {
   email: text("email").notNull(),
   restaurantId: integer("restaurant_id").notNull(),
   date: text("date").notNull(),
-  time: text("time").notNull(), // Add time field
+  time: text("time").notNull(),
 });
 
 export const insertSubmissionSchema = createInsertSchema(submissions).pick({

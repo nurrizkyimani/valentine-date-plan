@@ -1,43 +1,47 @@
 restaurantTypes:
   - id: 1
     name: "Fine Dining"
-    description: "Elegant atmosphere and exquisite cuisine"
-    imageUrl: "https://images.unsplash.com/photo-1517248135467-4c7edcad34c4"
+    description: "Elegant atmosphere and exquisite cuisine for our perfect evening"
+    imageUrl: "https://lh5.googleusercontent.com/p/AF1QipOyZKgXFRuXaAqZ15Cux_9ZQzMQTGAGT5P-RQJx=w408-h306-k-no"
   - id: 2
     name: "Casual Italian"
-    description: "Authentic Italian dishes in a relaxed setting"
-    imageUrl: "https://images.unsplash.com/photo-1497644083578-611b798c60f3"
+    description: "Where romance meets authentic Italian flavors"
+    imageUrl: "https://lh5.googleusercontent.com/p/AF1QipP5hAFz5NxcTJT3h7t5dZG-vvsbLHGxAi9j4aeX=w408-h306-k-no"
   - id: 3
     name: "French Bistro"
-    description: "Classic French cuisine with romantic ambiance"
-    imageUrl: "https://images.unsplash.com/photo-1514933651103-005eec06c04b"
+    description: "A cozy corner of Paris in the heart of the city"
+    imageUrl: "https://lh5.googleusercontent.com/p/AF1QipPfqX8d9VDGVeej0G_GhR-lS3ExYyqfnCyCnuqm=w408-h306-k-no"
   - id: 4
     name: "Rooftop Bar"
-    description: "Stunning views and sophisticated cocktails"
-    imageUrl: "https://images.unsplash.com/photo-1494346480775-936a9f0d0877"
+    description: "Toast to love under the stars"
+    imageUrl: "https://lh5.googleusercontent.com/p/AF1QipPOC6VzCkDPyLsBnuB79Q6Bc_mrKNRtMI5BiuYB=w408-h306-k-no"
 
 restaurants:
   - id: 1
     typeId: 1
     name: "Le Bernardin"
-    description: "World-class French cuisine"
-    imageUrl: "https://images.unsplash.com/photo-1517867065801-e20f409696b0"
+    description: "Let our love story unfold in this world-class French restaurant"
+    imageUrl: "https://lh5.googleusercontent.com/p/AF1QipOyZKgXFRuXaAqZ15Cux_9ZQzMQTGAGT5P-RQJx=w408-h306-k-no"
     address: "155 W 51st St"
+    mapsUrl: "https://maps.app.goo.gl/bxHZxFSHsr5yDGjj9"
   - id: 2
     typeId: 1
     name: "Daniel"
-    description: "Contemporary French cuisine"
-    imageUrl: "https://images.unsplash.com/photo-1516826989513-502b572b924e"
+    description: "A symphony of flavors for our special evening"
+    imageUrl: "https://lh5.googleusercontent.com/p/AF1QipP5hAFz5NxcTJT3h7t5dZG-vvsbLHGxAi9j4aeX=w408-h306-k-no"
     address: "60 E 65th St"
+    mapsUrl: "https://maps.app.goo.gl/bxHZxFSHsr5yDGjj9"
   - id: 3
     typeId: 2
     name: "Carbone"
-    description: "Italian-American cuisine"
-    imageUrl: "https://images.unsplash.com/photo-1518414881329-0f96c8f2a924"
+    description: "Where Italian passion meets culinary excellence"
+    imageUrl: "https://lh5.googleusercontent.com/p/AF1QipPfqX8d9VDGVeej0G_GhR-lS3ExYyqfnCyCnuqm=w408-h306-k-no"
     address: "181 Thompson St"
+    mapsUrl: "https://maps.app.goo.gl/bxHZxFSHsr5yDGjj9"
   - id: 4
     typeId: 3
     name: "Balthazar"
-    description: "Classic French bistro"
-    imageUrl: "https://images.unsplash.com/photo-1518199266791-5375a83190b7"
+    description: "A taste of Parisian romance in New York"
+    imageUrl: "https://lh5.googleusercontent.com/p/AF1QipPOC6VzCkDPyLsBnuB79Q6Bc_mrKNRtMI5BiuYB=w408-h306-k-no"
     address: "80 Spring St"
+    mapsUrl: "https://maps.app.goo.gl/bxHZxFSHsr5yDGjj9"

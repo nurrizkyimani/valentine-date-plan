@@ -3,9 +3,30 @@ import { Button } from "@/components/ui/button";
 import { useLocation } from "wouter";
 import { motion } from "framer-motion";
 import { valentineContent } from "@shared/content/valentine";
+import { useState, useEffect } from "react";
 
 export default function Proposal() {
   const [_, setLocation] = useLocation();
+  const [noButtonPosition, setNoButtonPosition] = useState({ x: 0, y: 0 });
+  const [isHovering, setIsHovering] = useState(false);
+
+  const moveButton = () => {
+    const newX = Math.random() * (window.innerWidth - 200); // Subtract button width
+    const newY = Math.random() * (window.innerHeight - 50); // Subtract button height
+    setNoButtonPosition({ x: newX, y: newY });
+    setIsHovering(true);
+  };
+
+  useEffect(() => {
+    // Reset position when window is resized
+    const handleResize = () => {
+      if (isHovering) {
+        moveButton();
+      }
+    };
+    window.addEventListener('resize', handleResize);
+    return () => window.removeEventListener('resize', handleResize);
+  }, [isHovering]);
 
   return (
     <div className="min-h-screen flex items-center justify-center bg-background px-4">
@@ -25,7 +46,7 @@ export default function Proposal() {
             >
               {valentineContent.proposal.message}
             </div>
-            <div className="text-center">
+            <div className="flex justify-center gap-4 relative">
               <Button 
                 size="lg"
                 className="bg-primary hover:bg-primary/90"
@@ -33,6 +54,26 @@ export default function Proposal() {
               >
                 {valentineContent.proposal.buttonText}
               </Button>
+
+              <motion.div
+                style={{
+                  position: isHovering ? 'fixed' : 'relative',
+                  top: noButtonPosition.y,
+                  left: noButtonPosition.x,
+                  zIndex: 50,
+                }}
+                animate={isHovering ? { x: 0, y: 0 } : {}}
+                transition={{ type: "spring", stiffness: 300 }}
+              >
+                <Button
+                  size="lg"
+                  variant="outline"
+                  onMouseEnter={moveButton}
+                  onTouchStart={moveButton}
+                >
+                  {valentineContent.proposal.backButton}
+                </Button>
+              </motion.div>
             </div>
           </CardContent>
         </Card>
