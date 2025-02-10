@@ -1,47 +1,46 @@
 restaurantTypes:
   - id: 1
-    name: "Fine Dining"
-    description: "Elegant atmosphere and exquisite cuisine for our perfect evening"
-    imageUrl: "https://images.pexels.com/photos/262047/pexels-photo-262047.jpeg"
+    name: "Asian Fusion"
+    description: "Elegant atmosphere and exquisite Asian cuisine for our perfect day"
+    imageUrl: "https://images.unsplash.com/photo-1622643944007-450264a5f9a9"
+
   - id: 2
-    name: "Casual Italian"
-    description: "Where romance meets authentic Italian flavors"
-    imageUrl: "https://images.pexels.com/photos/1484516/pexels-photo-1484516.jpeg"
+    name: "Indonesian Delights"
+    description: "Experience the rich and authentic tastes of Indonesia where modern meet tradition"
+    imageUrl: "https://img.freepik.com/free-photo/family-having-indian-food_53876-20449.jpg"
+
   - id: 3
-    name: "French Bistro"
-    description: "A cozy corner of Paris in the heart of the city"
-    imageUrl: "https://images.pexels.com/photos/941861/pexels-photo-941861.jpeg"
-  - id: 4
-    name: "Rooftop Bar"
-    description: "Toast to love under the stars"
-    imageUrl: "https://images.pexels.com/photos/1267696/pexels-photo-1267696.jpeg"
+    name: "European Bistro"
+    description: "Savor the charm and cuisine of a classic European bistro"
+    imageUrl: "https://img.freepik.com/free-photo/top-view-table-full-delicious-food-assortment_23-2149141339.jpg"
+
 
 restaurants:
   - id: 1
     typeId: 1
-    name: "Le Bernardin"
-    description: "Let our love story unfold in this world-class French restaurant"
-    imageUrl: "https://images.pexels.com/photos/262047/pexels-photo-262047.jpeg"
-    address: "155 W 51st St"
-    mapsUrl: "https://maps.app.goo.gl/bxHZxFSHsr5yDGjj9"
-  - id: 2
-    typeId: 1
-    name: "Daniel"
-    description: "A symphony of flavors for our special evening"
-    imageUrl: "https://images.pexels.com/photos/260922/pexels-photo-260922.jpeg"
-    address: "60 E 65th St"
-    mapsUrl: "https://maps.app.goo.gl/bxHZxFSHsr5yDGjj9"
+    name: "Silk Bistro"
+    description: "Exquisite Pan-Asian Flavors in the Heart of Jakarta"
+    imageUrl: "https://manual.co.id/wp-content/uploads/2023/01/100_silk.jpg"
+    address: "Jl. Teuku Cik Ditiro No.30 Menteng Central Jakarta"
+    mapsUrl: "https://maps.app.goo.gl/p8oW4dV9J1jFhRR86"
+
   - id: 3
     typeId: 2
-    name: "Carbone"
-    description: "Where Italian passion meets culinary excellence"
-    imageUrl: "https://images.pexels.com/photos/1484516/pexels-photo-1484516.jpeg"
-    address: "181 Thompson St"
-    mapsUrl: "https://maps.app.goo.gl/bxHZxFSHsr5yDGjj9"
+    name: "Kaum"
+    description: "Jl. Dr. Kusuma Atmaja No.77-79 Central Jakarta"
+    imageUrl: "https://manual.co.id/wp-content/uploads/2017/06/KAUM-Rest_Menteng-25.jpg"
+    address: "80 Spring St"
+    mapsUrl: "https://maps.app.goo.gl/GuX7ynCpvvziY9ok7"
+
   - id: 4
     typeId: 3
-    name: "Balthazar"
-    description: "A taste of Parisian romance in New York"
-    imageUrl: "https://images.pexels.com/photos/941861/pexels-photo-941861.jpeg"
-    address: "80 Spring St"
-    mapsUrl: "https://maps.app.goo.gl/bxHZxFSHsr5yDGjj9"
+    name: "Dominica Jakarta"
+    description: "Elevating Italian Cuisine with French Finesse of Jakarta"
+    imageUrl: "https://manual.co.id/wp-content/uploads/2023/06/919_dominica_ig.jpg"
+    address: "Jl. HOS. Cokroaminoto No.93 Central Jakarta"
+    mapsUrl: "https://maps.app.goo.gl/oLDq1WwL6DWzYdov7"
+
+
+
+
+

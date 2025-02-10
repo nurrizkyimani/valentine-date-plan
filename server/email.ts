@@ -33,7 +33,7 @@ export async function sendValentineConfirmation(
 
   await transporter.sendMail({
     from: process.env.GMAIL_USER,
-    to: process.env.RECIPIENT_EMAIL,
+    to: to,
     subject: '💝 Your Valentine\'s Date is Confirmed!',
     html: emailContent,
   });

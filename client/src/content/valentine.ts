@@ -1,9 +1,11 @@
+
+
 export const valentineContent = {
   proposal: {
     title: "Will You Be My Valentine?",
-    message: `My Dearest Love,
+    message: `My Dear Astrid,
 
-In this moment of hearts aflutter and dreams taking wing,
+The moment of hearts aflutter and dreams taking wing,
 I find myself lost in thoughts of you, my everything.
 Like stars that brighten the darkest night,
 Your presence fills my world with pure delight.
@@ -12,6 +14,7 @@ Would you grace me with the honor of being my Valentine?
 Together, let's create a memory divine,
 Starting with a romantic evening, just us two,
 At a place as special as my feelings for you.`,
+
     buttonText: "Yes, I'd Love To! 💕",
     backButton: "Let me think about it... 🤔",
   },
@@ -30,7 +33,7 @@ At a place as special as my feelings for you.`,
   form: {
     title: "Let's Make It Official",
     subtitle: "A few details to make our evening perfect",
-    nameLabel: "Your Sweet Name",
+    nameLabel: "Your Beautiful Name",
     emailLabel: "Your Email (for our special invitation)",
     timeLabel: "What time shall our hearts meet?",
     submitButton: "Can't Wait to See You! 💌",
@@ -43,5 +46,6 @@ At a place as special as my feelings for you.`,
     timePrefix: "I'll be counting the seconds until",
     journey: "Our romantic journey begins here...",
     backButton: "Start Over 💫",
+    img: "https://images.pexels.com/photos/941861/pexels-photo-941861.jpeg",
   },
 };

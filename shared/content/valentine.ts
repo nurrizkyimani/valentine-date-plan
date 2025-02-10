@@ -1,8 +1,9 @@
 export const valentineContent = {
   proposal: {
     title: "Will You Be My Valentine?",
-    message: `My Dearest Love,
-
+    gif: "https://images.pexels.com/photos/941861/pexels-photo-941861.jpeg",
+    message: `My Dear Love,
+ 
 In this moment of hearts aflutter and dreams taking wing,
 I find myself lost in thoughts of you, my everything.
 Like stars that brighten the darkest night,
@@ -12,6 +13,7 @@ Would you grace me with the honor of being my Valentine?
 Together, let's create a memory divine,
 Starting with a romantic evening, just us two,
 At a place as special as my feelings for you.`,
+
     buttonText: "Yes, I'd Love To! 💕",
     backButton: "Let me think about it... 🤔",
   },

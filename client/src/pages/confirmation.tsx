@@ -19,12 +19,12 @@ export default function Confirmation() {
         <Card>
           <CardContent className="pt-6 text-center">
             <motion.div
-              initial={{ scale: 0 }}
-              animate={{ scale: 1 }}
-              transition={{ duration: 0.5, delay: 0.3 }}
-              className="flex justify-center mb-6"
+                initial={{scale: 0}}
+                animate={{scale: 1}}
+                transition={{duration: 0.5, delay: 0.3}}
+                className="flex justify-center mb-6"
             >
-              <Heart className="h-16 w-16 text-primary animate-pulse" />
+              <Heart className="h-16 w-16 text-primary animate-pulse"/>
             </motion.div>
 
             <h1 className="text-4xl font-bold text-primary mb-4">
@@ -40,24 +40,19 @@ export default function Confirmation() {
               </p>
             </div>
 
-            <div 
-              className="mb-8 p-6 rounded-lg bg-primary/5 border border-primary/20"
-              style={{ 
-                backgroundImage: `url(${encodeURI('https://images.unsplash.com/photo-1515871204537-49a5fe66a31f')})`,
-                backgroundSize: 'cover',
-                backgroundPosition: 'center',
-                backgroundBlendMode: 'overlay'
-              }}
-            >
-              <p className="text-lg font-medium text-primary">
-                {valentineContent.confirmation.journey}
-              </p>
+            <div className="mb-8 flex justify-center items-center">
+              <img
+                  src={valentineContent.confirmation.img}
+                  className="w-64 h-64 object-cover rounded-lg"
+                  alt="Proposal"
+              />
             </div>
 
-            <Button 
-              size="lg"
-              onClick={() => setLocation("/")}
-              className="bg-primary hover:bg-primary/90"
+
+            <Button
+                size="lg"
+                onClick={() => setLocation("/")}
+                className="bg-primary hover:bg-primary/90"
             >
               {valentineContent.confirmation.backButton}
             </Button>

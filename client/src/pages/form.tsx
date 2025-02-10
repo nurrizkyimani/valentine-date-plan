@@ -14,9 +14,9 @@ import type { InsertSubmission } from "@shared/schema";
 import { apiRequest } from "@/lib/queryClient";
 
 export default function Form() {
-  const [location, setLocation] = useLocation();
   const { toast } = useToast();
-  const params = new URLSearchParams(location);
+  const [_, setLocation] = useLocation();
+  const params = new URLSearchParams(window.location.search);
   const restaurantId = params.get("restaurantId");
 
   const form = useForm<InsertSubmission>({
@@ -25,8 +25,14 @@ export default function Form() {
       restaurantId: parseInt(restaurantId || "0"),
       date: new Date().toISOString().split("T")[0],
       time: "19:00", // Default to 7 PM
+
     },
   });
+
+  const minDate = new Date(2025, 1, 16).toISOString().split("T")[0];  // February 15, 2025
+  const maxDate = new Date(2025, 1, 17).toISOString().split("T")[0];  // February 16, 2025
+
+
 
   const mutation = useMutation({
     mutationFn: async (data: InsertSubmission) => {
@@ -80,7 +86,13 @@ export default function Form() {
 
                 <div>
                   <Label htmlFor="date">Date</Label>
-                  <Input {...form.register("date")} id="date" type="date" />
+                  <Input
+                      {...form.register("date")}
+                      id="date"
+                      type="date"
+                      min={minDate}
+                      max={maxDate}
+                  />
                 </div>
 
                 <Button 
