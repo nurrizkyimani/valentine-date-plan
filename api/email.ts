@@ -22,7 +22,7 @@ export async function sendValentineConfirmation(
   const emailContent = `
     <h1>💖 Your Valentine's Date is Confirmed! 💖</h1>
     <p>Dear ${name},</p>
-    <p>Your romantic evening has been scheduled:</p>
+    <p>Your romantic getaway has been scheduled:</p>
     <ul>
       <li>Date: ${date}</li>
       <li>Time: ${time}</li>

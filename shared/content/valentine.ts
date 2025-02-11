@@ -11,27 +11,27 @@ Your presence fills my world with pure delight.
 
 Would you grace me with the honor of being my Valentine?
 Together, let's create a memory divine,
-Starting with a romantic evening, just us two,
+Starting with a romantic getaway, just us two,
 At a place as special as my feelings for you.`,
 
     buttonText: "Yes, I'd Love To! 💕",
     backButton: "Let me think about it... 🤔",
   },
   types: {
-    title: "A Perfect Evening Awaits",
+    title: "A Perfect Date Awaits",
     subtitle: "Choose the perfect ambiance for our romantic rendezvous",
     backButton: "Let me reconsider... 💭",
   },
   restaurants: {
     title: "Our Special Place",
-    subtitle: "Where shall our love story unfold tonight?",
+    subtitle: "Where shall our love story unfold ?",
     selectButton: "This is Perfect! 💑",
     mapButton: "View Location 📍",
     backButton: "Other Options 🔙",
   },
   form: {
     title: "Let's Make It Official",
-    subtitle: "A few details to make our evening perfect",
+    subtitle: "A few details to make our moment perfect",
     nameLabel: "Your Sweet Name",
     emailLabel: "Your Email (for our special invitation)",
     timeLabel: "What time shall our hearts meet?",
@@ -41,7 +41,7 @@ At a place as special as my feelings for you.`,
   confirmation: {
     title: "It's a Date! 💖",
     message: "My heart is already dancing with joy!",
-    subtitle: "Check your email for our romantic evening details",
+    subtitle: "Check your email for our romantic moment details",
     timePrefix: "I'll be counting the seconds until",
     journey: "Our romantic journey begins here...",
     backButton: "Start Over 💫",
