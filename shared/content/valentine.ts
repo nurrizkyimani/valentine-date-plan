@@ -1,7 +1,7 @@
 export const valentineContent = {
   proposal: {
     title: "Will You Be My Valentine?",
-    gif: "https://images.pexels.com/photos/941861/pexels-photo-941861.jpeg",
+    gif: "https://raw.githubusercontent.com/nurrizkyimani/valentine-date-plan/refs/heads/main/img/cat-heart-intro.gif",
     message: `My Dear Love,
  
 In this moment of hearts aflutter and dreams taking wing,
