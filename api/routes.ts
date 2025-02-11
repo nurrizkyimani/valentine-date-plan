@@ -1,8 +1,8 @@
 import type { Express } from "express";
 import { createServer, type Server } from "http";
-import { storage } from "./storage";
-import { insertSubmissionSchema } from "../shared/schema";
-import { sendValentineConfirmation } from "./email";
+import { storage } from "./storage.js";
+import { insertSubmissionSchema } from "../shared/schema.js";
+import { sendValentineConfirmation } from "./email.js";
 
 export function registerRoutes(app: Express): Server {
   app.get("/api/restaurant-types", async (_req, res) => {
