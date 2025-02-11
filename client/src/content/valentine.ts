@@ -46,6 +46,6 @@ At a place as special as my feelings for you.`,
     timePrefix: "I'll be counting the seconds until",
     journey: "Our romantic journey begins here...",
     backButton: "Start Over 💫",
-    img: "https://images.pexels.com/photos/941861/pexels-photo-941861.jpeg",
+    img: "https://raw.githubusercontent.com/nurrizkyimani/valentine-date-plan/refs/heads/main/img/confimation-cat.gif",
   },
 };
