@@ -1,4 +1,4 @@
-import { type RestaurantType, type Restaurant, type Submission, type InsertSubmission } from "@shared/schema";
+import { type RestaurantType, type Restaurant, type Submission, type InsertSubmission } from "../shared/schema";
 import fs from 'fs';
 import path from 'path';
 import yaml from 'js-yaml';
